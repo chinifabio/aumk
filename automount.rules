@@ -1,0 +1,7 @@
+# %k is the label name of the USB media
+
+# mount the device when added
+KERNEL=="sd[a-z]*", ACTION=="add",  	RUN+="/usr/bin/systemctl --no-block restart automount@%k.service"
+
+# clean up after device removal
+KERNEL=="sd[a-z]*", ACTION=="remove",	RUN+="/usr/bin/systemctl --no-block restart automount@%k.service"
