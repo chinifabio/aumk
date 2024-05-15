@@ -22,6 +22,15 @@ Ensure that you have the `make` and `git` utility installed on your system. If i
     ```bash
     sudo udevadm control --reload-rules
     ```
+- If you use moonraker as your Klipper host, you can use the `update_manager` to update the repo automatically by adding to the `moonraker.conf` file the following lines:
+    ```ini
+    [update_manager aumk]
+    type: git_repo
+    path: ~/aumk
+    origin: https://github.com/chinifabio/aumk.git
+    install_script: install.sh
+    managed_service: aumk
+    ```
 ## Uninstallation
 - To uninstall AUMK and revert changes, run the following command:
     ```bash
