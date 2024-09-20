@@ -31,6 +31,12 @@ Ensure that you have the `make` and `git` utility installed on your system. If i
     install_script: install.sh
     managed_service: aumk
     ```
+## Customization
+To customize the parent directory where the USB will be mounted run the following command
+```bash
+echo "CUSTOM_PARENT_PATH=<custom path>" | sudo tee /etc/default/automount
+
+```
 ## Uninstallation
 - To uninstall AUMK and revert changes, run the following command:
     ```bash

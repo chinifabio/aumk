@@ -12,7 +12,7 @@ AUTOMOUNT_TYPE='auto'
 confdir=/etc/media-automount.d
 
 # Directory to use as parent media dir for mountpoints
-mediadir=/home/pi/printer_data/gcodes
+mediadir=${CUSTOM_PARENT_PATH:-/home/pi/printer_data/gcodes}
 
 [ $(id -u) != 0 ] && {
     echo "This tool requires root permissions"
